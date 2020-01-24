@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach (string item in ViewBag.products)
+{
+    @*<li><a href="/phone/details/{@item}">@item</a></h2></li>*@
+    <li>
+        <a href="@Url.Action("PhoneList", "Phone", new { product = @item })">@item </a>
+    </li>
+}
